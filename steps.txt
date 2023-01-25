@@ -1,0 +1,16 @@
+create 2 ec2-instance: client and server
+on the server(A) install mysql server as follows:-
+sudo apt update
+sudo apt upgrade
+sudo apt install mysql-server
+check for sucessfull installation by mysql --version
+on server(B) install mysql client.
+sudo apt install mysql-client
+check for sucessfull installation by mysql --version
+configure mysql in server(A)
+on server(A) add inbound rules and open tcp port 3306 so client server can be able to connect.
+create new user and grand privillages to the new user in server A 
+exit and connect to client ec2
+connect from client to server
+mysql -u username -h mysql_server_ip -p
+mysql -u claude -h mysql_server_18.219.169.184 -p
